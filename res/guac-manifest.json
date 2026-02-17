@@ -1,0 +1,27 @@
+{
+	"guacamoleVersion" : "*",
+	"name" : "ADFC Hamburg-Branding",
+	"namespace" : "branding-adfc-hh",
+	"smallIcon" : "images/favicon-64.png",
+	"largeIcon" : "images/favicon-144.png",
+
+	"translations" : [
+		"translations/en.json",
+		"translations/de.json"
+	],
+
+	"html" : [
+		"html/login-welcome.html"
+	],
+
+	"css" : [
+		"css/adfc.css"
+	],
+
+	"resources" : {
+		"images/logo.png" : "image/png",
+		"images/bicycle.png" : "image/png",
+		"images/favicon-64.png" : "image/png",
+		"images/favicon-144.png" : "image/png"
+	}
+}

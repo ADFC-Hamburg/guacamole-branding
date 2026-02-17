@@ -1,0 +1,11 @@
+{
+	"NAME" : "English",
+
+	"APP" : {
+		"NAME" : "ADFC Hamburg Homeoffice"
+	},
+
+	"LOGIN" : {
+		"WELCOME" : "Welcome to the"
+	}
+}

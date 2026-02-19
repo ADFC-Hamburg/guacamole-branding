@@ -1,0 +1,35 @@
+name: Release CI
+run-name: ${{ github.actor }} is releasing version ${{ github.ref_name }}
+
+on:
+  push:
+    tags:
+    - '*'
+
+env:
+  EXTENSION_NAME: 'branding-adfc-hh.jar'
+  EXTENSION_DIR: './res'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v6
+    - name: Package Guacamole extension
+      uses: thedoctor0/zip-release@0.7.6
+      with:
+        type: zip
+        filename: "${{ env.EXTENSION_NAME }}"
+        directory: "${{ env.EXTENSION_DIR }}"
+        path: './*'
+        exclusions: '*.git*'
+    - name: Publish release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "${{ env.EXTENSION_DIR }}/${{ env.EXTENSION_NAME }}"
+        allowUpdates: true
+        artifactErrorsFailBuild: true
+        replacesArtifacts: true

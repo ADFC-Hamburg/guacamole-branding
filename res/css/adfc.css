@@ -165,3 +165,12 @@ table.sorted tbody tr:hover {
 .section-tabs li a:hover {
 	background-color:		rgb(from var(--adfc-blue) r g b / 0.5);
 }
+
+.client-status-modal .notification {
+	background-color:		rgba(from var(--adfc-blue) r g b / 0.75);
+	color:					white;
+}
+
+.client-status-modal .notification:not(.error) .button {
+	border:					none;
+}

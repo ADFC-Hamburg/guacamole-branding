@@ -132,6 +132,7 @@ table.sorted {
 
 table.sorted thead {
 	background-color:		var(--adfc-orange);
+	color:					white;
 }
 
 table.sorted th,

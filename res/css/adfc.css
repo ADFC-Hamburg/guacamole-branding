@@ -126,6 +126,10 @@ div.login-ui,
 	background-image:		url('app/ext/branding-adfc-hh/images/bicycle.png');
 }
 
+.menu-dropdown .menu-indicator {
+	filter:					invert(1);
+}
+
 table.sorted {
 	border:					solid 1px var(--adfc-orange);
 }
@@ -138,11 +142,17 @@ table.sorted thead {
 table.sorted th,
 table.sorted td {
 	border:					none;
+	padding:				.5em 1em;
 	background:				none;
 }
 
-table.sorted th.sort-primary::after,
-.menu-dropdown .menu-indicator {
+table.sorted th.sort-primary {
+	font-weight:			initial;
+	padding-right:			1em;
+}
+
+table.sorted th.sort-primary::after {
+	margin-right:				-1.225em;
 	filter:					invert(1);
 }
 
